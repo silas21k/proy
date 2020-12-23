@@ -1,0 +1,145 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <section class="content">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <center>
+                    <h3 class="box-title mt-2">Reservas</h3>
+                </center>
+            </div>
+
+            <form class="form-horizontal" method="POST" action="/Reservas/addreserva"
+                style="background-color: #c7637167;">
+                <div class="box-body">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label mt-2">Nombre</label>
+                                <div class="col-sm-12">
+                                    <input name="Nombre" type="text" class="form-control" placeholder="Nombre"
+                                        autocomplete="off" ><!--required-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label mt-2">Apellidos</label>
+                                <div class="col-sm-12">
+                                    <input name="Apellidos" type="text" class="form-control" placeholder="Apellidos"
+                                        autocomplete="off" ><!--required-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Telefono</label>
+                                <div class="col-sm-12">
+                                    <input name="Telefono" type="text" class="form-control" placeholder="Telefono"
+                                        autocomplete="off" ><!--required-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Correo</label>
+                                <div class="col-sm-12">
+                                    <input name="Correo" type="text" class="form-control" placeholder="Email"
+                                        autocomplete="off"><!--required-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="form-group">
+                        <label class="col-sm-2 control-label">Establecimiento</label>
+                        <div class="col-sm-10">
+                            <input name="establecimiento" type="text" class="form-control" placeholder="Establecimiento"
+                                autocomplete="off" required>
+
+                        </div>
+                    </div>-->
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Establecimiento</label>
+                        <center>
+                            <div class="col-sm-12">
+                                <select class="form-control" id="exampleSelect2" name="Establecimiento">
+                                    <option>AVASalud</option>
+                                    <option>Gestion, trabajo y salud</option>
+                                    <option>Laboratorios integrados</option>
+                                    <option>Medical asistant</option>
+                                    <option>Renacer Peru</option>
+                                    <option>Roe Lab</option>
+                                    <option>Suizalab</option>
+                                    <option>SYNLAB</option>
+                                    <option>Unilabs</option>
+                                </select>
+                            </div>
+                        </center>
+                    </div>
+
+                    <!--<div class="form-group">
+                        <label class="col-sm-2 control-label">Prueba</label>
+                        <div class="col-sm-10">
+                            <input name="prueba" type="text" class="form-control" placeholder="Prueba" autocomplete="off" required>
+
+                        </div>
+                    </div>-->
+
+                    <div class="form-group">
+
+                        <label class="col-sm-2 control-label">Prueba</label>
+                        <center>
+                            <div class="col-sm-12">
+                                <select class="form-control" id="exampleSelect1" name="Prueba">
+                                    <option>Rapida</option>
+                                    <option>Molecular</option>
+                                </select>
+                            </div>
+                        </center>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Fecha</label>
+                                <div class="col-sm-12">
+                                    <input name="Fecha" type="text" class="form-control" placeholder="YYYY-MM-DD"
+                                        autocomplete="off"><!--required-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Horario</label>
+                                <div class="col-sm-12">
+                                    <input name="Horario" type="text" class="form-control" placeholder="hh:mm:ss"
+                                        autocomplete="off" ><!--required-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box-footer">
+                    <center>
+                        <a href="/"><button type="button" type="button" class="btn btn-danger">Cancel</button></a>
+                        <input name="save" type="submit" class="btn btn-info pull-right" value="Enviar">
+                    </center>
+                    <br>
+                </div>
+
+            </form>
+            <br>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

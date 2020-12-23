@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-body">
+            <table id="dataphone" class="table table-bordered table-striped">
+                <thead align="center" class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Distrito</th>
+                        <th>Direccion</th>
+                        <th>Tipo de Prueba</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if dataB|length == 0 %}
+                    <tr>
+                        <td>No Data</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        {% for row in dataB %}
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</div>
+{% endblock %}
